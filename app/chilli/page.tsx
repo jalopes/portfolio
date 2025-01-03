@@ -4,9 +4,15 @@
 import React, { useState } from 'react';
 import { FaDatabase, FaNodeJs, FaReact } from 'react-icons/fa';
 import { SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
-import Lightbox from 'yet-another-react-lightbox';
+import Lightbox, { SlideImage } from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import Image from 'next/image';
+
+// Definição do tipo personalizado
+interface CustomSlide extends SlideImage {
+  title: string;
+  description: string;
+}
 
 const ProjetoChilli: React.FC = () => {
   const imagens = [
@@ -159,7 +165,7 @@ const ProjetoChilli: React.FC = () => {
           open={isOpen}
           close={() => setIsOpen(false)}
           index={currentImageIndex}
-          slides={imagens.map((img) => ({
+          slides={imagens.map((img): CustomSlide => ({
             src: img.src,
             title: img.alt,
             description: img.description,
@@ -168,9 +174,9 @@ const ProjetoChilli: React.FC = () => {
           render={{
             slide: ({ slide }) => (
               <div className="flex flex-col items-center">
-                <img src={slide.src} alt={slide.title} className="max-w-full max-h-screen" />
-                <h3 className="mt-4 text-2xl font-bold">{slide.title}</h3>
-                <p className="mt-2 text-lg">{slide.description}</p>
+                <img src={slide.src} className="max-w-full max-h-screen" />
+                {/* <h3 className="mt-4 text-2xl font-bold">{slide.title}</h3>
+                <p className="mt-2 text-lg">{slide.description}</p> */}
               </div>
             ),
           }}
