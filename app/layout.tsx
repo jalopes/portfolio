@@ -31,7 +31,7 @@ export default function RootLayout({
         <Navbar />
 
         {/* Conteúdo Principal */}
-        <div className="container mx-auto px-4">{children}</div>
+        <div className="w-full">{children}</div>
       </body>
     </html>
   );

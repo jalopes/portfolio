@@ -89,9 +89,10 @@ const ProjetoChilli: React.FC = () => {
   };
 
   return (
-    <div className="bg-white text-[var(--dark-text-color)]">
+    // <div className="bg-white text-[var(--dark-text-color)]">
+    <div className="bg-[#090d16] text-black">
       {/* Header */}
-      <header className="bg-[var(--primary-color)] text-[var(--text-color)] py-6">
+      <header className="bg-[var(--primary-color)] text-white py-6">
         <div className="container mx-auto px-6">
           <h1 className="text-4xl font-bold">Projeto Chilli</h1>
           <p className="mt-2 text-lg">
@@ -129,35 +130,38 @@ const ProjetoChilli: React.FC = () => {
       </section>
 
       {/* Galeria de Imagens */}
-      <section className="py-16 bg-[var(--contrast-bg-color)]">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-6 text-[var(--dark-text-color)]">Galeria de Imagens</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {imagens.map((imagem, index) => (
-              <div
-                key={index}
-                className="bg-[var(--background-color)] shadow rounded-lg overflow-hidden cursor-pointer"
-                onClick={() => openLightbox(index)}
-              >
-                {/* Contêiner com proporção quadrada */}
-                <div className="w-full aspect-square relative">
-                  <Image
-                    src={imagem.src}
-                    alt={imagem.alt}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-[var(--text-color)] mb-2">{imagem.alt}</h3>
-                  <p className="text-[var(--tertiary-color)] text-sm">{imagem.description}</p>
-                </div>
-              </div>
-            ))}
+{/* Galeria de Imagens */}
+<section className="py-16 bg-white">
+  <div className="container mx-auto px-6">
+    <h2 className="text-3xl font-bold mb-6 text-[var(--dark-text-color)]">Galeria de Imagens</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {imagens.map((imagem, index) => (
+        <div
+          key={index}
+          className="bg-[#090d16] shadow rounded-lg overflow-hidden cursor-pointer text-white"
+          onClick={() => openLightbox(index)}
+        >
+          {/* Contêiner para centralizar e ajustar imagem */}
+          <div className="w-full h-[600px] flex items-center justify-center bg-[var(--background-color)]">
+            <Image
+              src={imagem.src}
+              alt={imagem.alt}
+              width={420}
+              height={420}
+              objectFit="contain"
+              className="max-w-full max-h-full"
+            />
+          </div>
+          <div className="p-4">
+            <h3 className="text-lg font-semibold text-[var(--text-color)] mb-2">{imagem.alt}</h3>
+            <p className="text-[var(--tertiary-color)] text-sm">{imagem.description}</p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Lightbox para visualização de imagens */}
       {isOpen && (
@@ -198,7 +202,7 @@ const ProjetoChilli: React.FC = () => {
       </section>
 
       {/* Seção de Tecnologias */}
-      <section className="py-16 bg-[var(--contrast-bg-color)]">
+      <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-6 text-[var(--dark-text-color)]">Tecnologias Utilizadas</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -237,7 +241,7 @@ const ProjetoChilli: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[var(--primary-color)] text-[var(--text-color)] py-6">
+      <footer className="bg-[#090d16] text-white py-6">
         <div className="container mx-auto px-6 text-center">
           <p>&copy; {new Date().getFullYear()} Projeto Chilli. Todos os direitos reservados.</p>
         </div>

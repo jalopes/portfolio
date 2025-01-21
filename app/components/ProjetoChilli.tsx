@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const ProjetoChilli: React.FC = () => {
   return (
-    <div className="bg-gray-900 text-white shadow-lg rounded-lg overflow-hidden">
+    <div className="bg-gray-900 text-white rounded-lg overflow-hidden">
       {/* Imagem de destaque */}
       <img
         src="/chilli/logo.png" // Atualize para a URL correta da imagem
