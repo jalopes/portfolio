@@ -26,12 +26,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={plusJakartaSans.variable}>
-      <body className="antialiased bg-white text-[var(--dark-text-color)]">
+      <body className="antialiased">
         {/* Incluindo a Navbar */}
         <Navbar />
 
         {/* Conteúdo Principal */}
-        <div className="w-full">{children}</div>
+        <div className="w-full mt-20">{children}</div>
       </body>
     </html>
   );

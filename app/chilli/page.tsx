@@ -21,46 +21,21 @@ const ProjetoChilli: React.FC = () => {
       alt: 'Home',
       description: 'Visão geral da página inicial.'
     },
-    // {
-    //   src: '/chilli/2-home.png',
-    //   alt: 'Home Alternativa',
-    //   description: 'Versão alternativa da página inicial com foco em layout responsivo.'
-    // },
     {
       src: '/chilli/3-loja.png',
       alt: 'Loja',
       description: 'Seção da loja onde os produtos exclusivos são exibidos. Integração com Mercado Livre que busca automaticamente os produtos da loja no Mercado Livre.'
     },
-    // {
-    //   src: '/chilli/4-reserva.png',
-    //   alt: 'Reserva',
-    //   description: 'Interface de reserva online com calendário interativo.'
-    // },
     {
-        src: '/chilli/5-reserva-detalhe.png',
-        alt: 'Acomodações',
-        description: 'Seção detalhando as acomodações disponíveis, com informações sobre vagas, comodidades e características específicas de cada opção.'
+      src: '/chilli/5-reserva-detalhe.png',
+      alt: 'Acomodações',
+      description: 'Seção detalhando as acomodações disponíveis, com informações sobre vagas, comodidades e características específicas de cada opção.'
     },
     {
       src: '/chilli/6-acomodacao.png',
       alt: 'Acomodações',
       description: 'Seção onde ocorre a seleção da acomodação durante o processo de reserva, com filtros personalizados para facilitar a escolha.'
     },
-    // {
-    //   src: '/chilli/7-cadastro.png',
-    //   alt: 'Cadastro',
-    //   description: 'Formulário de cadastro simplificado para novos usuários.'
-    // },
-    // {
-    //   src: '/chilli/8-pagamento.png',
-    //   alt: 'Pagamento',
-    //   description: 'Processo de pagamento seguro integrado com múltiplas opções.'
-    // },
-    // {
-    //   src: '/chilli/9-email-pre-reserva.png',
-    //   alt: 'Email Pré-Reserva',
-    //   description: 'Modelo de email enviado após a pré-reserva ser efetuada.'
-    // },
     {
       src: '/chilli/10-email-reserva.png',
       alt: 'Email Reserva',
@@ -89,12 +64,12 @@ const ProjetoChilli: React.FC = () => {
   };
 
   return (
-    // <div className="bg-white text-[var(--dark-text-color)]">
-    <div className="bg-[#090d16] text-black">
-      {/* Header */}
+    <div className="bg-black text-white tracking-wide mt-16">
+
+      {/* Cabeçalho */}
       <header className="bg-[var(--primary-color)] text-white py-6">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold">Projeto Chilli</h1>
+          <h1 className="text-4xl font-bold uppercase tracking-wider">Projeto Chilli</h1>
           <p className="mt-2 text-lg">
             Um projeto temático focado em experiências únicas para um público masculino.
           </p>
@@ -102,113 +77,132 @@ const ProjetoChilli: React.FC = () => {
       </header>
 
       {/* Aviso sobre Conteúdo Sensível */}
-      <section className="bg-yellow-100 text-yellow-800 py-4">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-sm">
-            Este site pode conter conteúdo sensual e sensível para algumas pessoas. Visite o oficial:{" "}
-            <a
-              href="https://hotelchilli.com.br"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline font-semibold"
-            >
-              hotelchilli.com.br
-            </a>
-            .
-          </p>
+      <section>
+        <div className="container mx-auto p-4">
+          <div className="px-6 py-4 text-center bg-gray-500 rounded-lg text-white">
+            <p className="text-sm">
+              Este site pode conter conteúdo sensual e sensível para algumas pessoas. Visite o oficial:{" "}
+              <a
+                href="https://hotelchilli.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline font-semibold"
+              >
+                hotelchilli.com.br
+              </a>
+              .
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Sobre o Projeto */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-6">Sobre o Projeto</h2>
-          <p className="text-lg leading-7 text-[var(--dark-text-color)]">
-            O Chilli é um hotel temático exclusivo para homens. O site reflete a identidade visual única do local e oferece um sistema completo de reservas para hospedagem. Utilizamos o gateway de pagamentos do Mercado Pago e há uma integração com o serviço de hotéis que o estabelecimento utiliza.
-          </p>
-        </div>
-      </section>
-
-      {/* Galeria de Imagens */}
-{/* Galeria de Imagens */}
-<section className="py-16 bg-white">
-  <div className="container mx-auto px-6">
-    <h2 className="text-3xl font-bold mb-6 text-[var(--dark-text-color)]">Galeria de Imagens</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {imagens.map((imagem, index) => (
-        <div
-          key={index}
-          className="bg-[#090d16] shadow rounded-lg overflow-hidden cursor-pointer text-white"
-          onClick={() => openLightbox(index)}
-        >
-          {/* Contêiner para centralizar e ajustar imagem */}
-          <div className="w-full h-[600px] flex items-center justify-center bg-[var(--background-color)]">
-            <Image
-              src={imagem.src}
-              alt={imagem.alt}
-              width={420}
-              height={420}
-              objectFit="contain"
-              className="max-w-full max-h-full"
-            />
-          </div>
-          <div className="p-4">
-            <h3 className="text-lg font-semibold text-[var(--text-color)] mb-2">{imagem.alt}</h3>
-            <p className="text-[var(--tertiary-color)] text-sm">{imagem.description}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-
-      {/* Lightbox para visualização de imagens */}
-      {isOpen && (
-        <Lightbox
-          open={isOpen}
-          close={() => setIsOpen(false)}
-          index={currentImageIndex}
-          slides={imagens.map((img): CustomSlide => ({
-            src: img.src,
-            title: img.alt,
-            description: img.description,
-          }))}
-          carousel={{ finite: false }}
-          render={{
-            slide: ({ slide }) => (
-              <div className="flex flex-col items-center">
-                <img src={slide.src} className="max-w-full max-h-screen" />
-                {/* <h3 className="mt-4 text-2xl font-bold">{slide.title}</h3>
-                <p className="mt-2 text-lg">{slide.description}</p> */}
+      {/* Seção de Apresentação */}
+      <section className="py-16 bg-black">
+        <div className="container mx-auto p-20 flex">
+          <div className="flex w-full h-full">
+            {/* Mockup ou imagem do projeto */}
+            <div className="w-1/2">
+              <div className="relative">
+                <Image
+                  src="/chilli/cover.png" // Substitua pelo caminho correto da imagem de mockup
+                  alt="Mockup Hotel Chilli"
+                  width={600}
+                  height={400}
+                  className="cursor-pointer"
+                  onClick={() => openLightbox(0)} // Abre o lightbox na primeira imagem
+                />
               </div>
-            ),
-          }}
-        />
-      )}
+            </div>
 
-      {/* Informações Adicionais */}
-      <section className="py-16 bg-white">
+            {/* Descrição do projeto */}
+            <div className="w-1/2 flex flex-col justify-center">
+              <h1 className="text-4xl font-bold text-white mb-6">Hotel Chilli</h1>
+              <p className="text-lg text-gray-300 mb-4">
+                O <span className="text-red-500 font-semibold">Hotel Chilli</span> é um projeto temático desenvolvido para oferecer uma experiência completa de hospedagem online. O site inclui uma área dedicada para reservas, com integração direta a plataformas de pagamento seguras e um sistema de gerenciamento eficiente.
+              </p>
+              <p className="text-lg text-gray-300 mb-4">
+                O projeto também conta com uma página exclusiva para administradores, onde é possível gerenciar reservas, verificar disponibilidade e acessar relatórios detalhados. Essa funcionalidade proporciona maior controle e agilidade na administração do hotel.
+              </p>
+              <p className="text-lg text-gray-300">
+                O site foi desenvolvido utilizando tecnologias modernas como <span className="font-medium text-red-500">Next.js, TypeScript e Tailwind CSS</span>, priorizando segurança, desempenho e usabilidade. O layout responsivo garante uma navegação eficiente em diversos dispositivos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-6 text-[var(--dark-text-color)]">Destaques</h2>
-          <ul className="list-disc list-inside text-[var(--dark-text-color)] text-lg space-y-2">
-            <li>Design moderno e temático</li>
-            <li>Funcionalidades de reserva online</li>
-            <li>Integração com sistemas de pagamento</li>
-            <li>Foco em SEO e acessibilidade</li>
-            <li>Totalmente responsivo</li> {/* Adicionado */}
+          <h2 className="text-3xl font-bold mb-6 text-white uppercase tracking-wider">Funcionalidades</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">Para Usuários Finais</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-300">
+                <li>Integração com <strong>Mercado Pago</strong>.</li>
+                <li>Consulta de produtos via <strong>Mercado Livre</strong>.</li>
+                <li>Envio de e-mails automatizados.</li>
+                <li><strong>Webhooks</strong> para atualização de pagamentos.</li>
+                <li>Layout responsivo e otimizado.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">Para Administradores</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-300">
+                <li>Gerenciamento de reservas.</li>
+                <li>Disponibilidade em tempo real.</li>
+                <li>Relatórios detalhados.</li>
+                <li>Integração com sistemas internos.</li>
+                <li>Sistema de permissões.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção de Arquitetura e Tecnologias */}
+      <section className="py-16 bg-black">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6 text-white uppercase tracking-wider">Arquitetura e Tecnologias</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-semibold mb-4 text-white">Backend</h3>
+              <p className="text-lg text-gray-300">
+                Arquitetura <strong>serverless</strong> com <strong>Next.js API Routes</strong>, integrando <strong>Mercado Pago</strong> e <strong>Mercado Livre</strong>. Uso de <strong>webhooks</strong> para notificações em tempo real e sistema de permissões para segurança.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-4 text-white">Banco de Dados</h3>
+              <p className="text-lg text-gray-300">
+                <strong>PostgreSQL</strong> gerenciado com <strong>Prisma</strong>, garantindo eficiência, consultas rápidas e segurança.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção de Diferenciais */}
+      <section className="py-16 bg-black">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6 text-white uppercase tracking-wider">Diferenciais</h2>
+          <ul className="list-disc list-inside space-y-4 text-gray-300">
+            <li><strong>Layout Responsivo</strong>: Design moderno e adaptável para dispositivos móveis e desktops, garantindo uma experiência de usuário consistente em todas as plataformas.</li>
+            <li><strong>Integrações Robustes</strong>: Conexão eficiente com serviços externos como Mercado Pago e Mercado Livre, proporcionando funcionalidades avançadas e seguras.</li>
+            <li><strong>Infraestrutura Moderna e Escalável</strong>: Utilização de tecnologias serverless e bancos de dados gerenciados, assegurando que o sistema possa escalar conforme a demanda cresce.</li>
+            <li><strong>Webhooks para Pagamentos</strong>: Implementação de webhooks para receber atualizações em tempo real sobre o status das transações, garantindo sincronização automática e confiável das informações de pagamento.</li> {/* Adicionado */}
+            <li><strong>Segurança</strong>: Implementação de sistemas de permissões e práticas de segurança avançadas para proteger dados sensíveis e garantir transações seguras.</li>
+            <li><strong>Desempenho Otimizado</strong>: Foco em otimizações de performance para garantir tempos de carregamento rápidos e uma experiência de usuário fluida.</li>
           </ul>
         </div>
       </section>
 
-      {/* Seção de Tecnologias */}
-      <section className="py-16 bg-gray-100">
+      {/* Seção de Tecnologias Utilizadas */}
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-6 text-[var(--dark-text-color)]">Tecnologias Utilizadas</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white uppercase tracking-wider">Tecnologias Utilizadas</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {/* Next.js */}
             <div className="flex flex-col items-center text-center">
-              <SiNextdotjs className="text-6xl text-[#000000]" />
+              <SiNextdotjs className="text-6xl text-white" />
               <p className="mt-2 text-lg font-semibold">Next.js</p>
             </div>
             {/* TypeScript */}
@@ -236,14 +230,53 @@ const ProjetoChilli: React.FC = () => {
               <FaReact className="text-6xl text-[#61DBFB]" />
               <p className="mt-2 text-lg font-semibold">React</p>
             </div>
+            {/* Webhooks */}
+            <div className="flex flex-col items-center text-center">
+              {/* Utilizando um ícone representativo, por exemplo, um ícone de rede ou notificações */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-24 w-24 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <p className="mt-2 text-lg font-semibold">Webhooks</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#090d16] text-white py-6">
-        <div className="container mx-auto px-6 text-center">
-          <p>&copy; {new Date().getFullYear()} Projeto Chilli. Todos os direitos reservados.</p>
+
+      {/* Lightbox para Imagens */}
+      {isOpen && (
+        <Lightbox
+          open={isOpen}
+          close={() => setIsOpen(false)}
+          index={currentImageIndex}
+          slides={imagens.map((img): CustomSlide => ({
+            src: img.src,
+            title: img.alt,
+            description: img.description,
+          }))}
+          carousel={{ finite: false }}
+          render={{
+            slide: ({ slide }) => (
+              <div className="flex flex-col items-center">
+                <img src={slide.src} alt={slide.title} className="max-w-full max-h-screen" />
+                <h3 className="mt-4 text-2xl font-bold text-white">{slide.title}</h3>
+                <p className="mt-2 text-lg text-white">{slide.description}</p>
+              </div>
+            ),
+          }}
+        />
+      )}
+
+      {/* Rodapé */}
+      <footer className="bg-[var(--primary-color)] text-white py-6">
+        <div className="container mx-auto text-center">
+          <p>&copy; {new Date().getFullYear()} Hotel Chilli. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>

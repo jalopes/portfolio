@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="bg-[var(--primary-color)] text-[var(--text-color)]">
+    <nav className="bg-black text-white uppercase tracking-wider font-bold">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo ou Título */}
-        <Link href="/" className="text-2xl font-bold">
+        <Link href="/" className="text-2xl font-bold text-white">
           Meu Portfólio
         </Link>
 
