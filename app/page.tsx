@@ -1,6 +1,5 @@
 // app/page.tsx
 import React from 'react';
-import DiagonalDivider from './components/DiagonalDivider';
 import ProjetoChilli from './components/ProjetoChilli';
 import ProjetoDataNutri from './components/ProjetoDataNutri';
 

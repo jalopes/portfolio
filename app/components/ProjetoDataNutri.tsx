@@ -4,60 +4,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import DiagonalDivider from './DiagonalDivider'; // Certifique-se de ter este componente
 
-interface Transform {
-  rotateX?: number; // Rotação em graus no eixo X
-  rotateY?: number; // Rotação em graus no eixo Y
-  rotateZ?: number; // Rotação em graus no eixo Z
-}
-
-interface Offset {
-  x: number; // Deslocamento horizontal em pixels
-  y: number; // Deslocamento vertical em pixels
-}
-
 interface ProjetoDataNutriProps {
-  offsets?: {
-    image1: Offset;
-    image2: Offset;
-    image3: Offset;
-  };
-  transforms?: {
-    image1: Transform;
-    image2: Transform;
-    image3: Transform;
-  };
+
 }
 
 const ProjetoDataNutri: React.FC<ProjetoDataNutriProps> = ({
-  offsets = {
-    image1: { x: 0, y: 0 },
-    image2: { x: 100, y: 300 },
-    image3: { x: -200, y: 400 },
-  },
-  transforms = {
-    image1: { rotateX: 0, rotateY: 0, rotateZ: 0 },
-    image2: { rotateX: 0, rotateY: 0, rotateZ: 0 },
-    image3: { rotateX: 40, rotateY: 0, rotateZ: 0 },
-  },
 }) => {
-  /**
-   * Função para gerar o estilo de transformação para cada imagem.
-   * @param offset Deslocamento em x e y.
-   * @param transform Rotação em x, y e z.
-   * @param translateZ Deslocamento no eixo z para gerenciar a profundidade.
-   * @returns String com as transformações CSS aplicadas.
-   */
-  const getTransformStyle = (
-    offset: Offset,
-    transform: Transform,
-    translateZ: number
-  ) => {
-    const { x, y } = offset;
-    const { rotateX = 0, rotateY = 0, rotateZ = 0 } = transform;
-
-    return `translate3d(${x}px, ${y}px, ${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
-  };
-
   return (
     <section className="bg-gray-600">
       <div className="md:container mx-auto p-6 md:p-10">
