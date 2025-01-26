@@ -102,13 +102,13 @@ const DataNutri: React.FC = () => {
 
             <div className="w-full lg:w-2/5 flex flex-col justify-center">
               <p className="text-gray-300 mb-4">
-                O <span className="text-red-500 font-semibold">DataNutri</span> é uma plataforma interativa projetada para oferecer uma experiência completa na análise e visualização de informações nutricionais. Nosso objetivo é capacitar usuários com dados detalhados para escolhas alimentares mais saudáveis.
+                O <span className="text-[#4996b5] font-semibold">DataNutri</span> é uma plataforma interativa projetada para oferecer uma experiência completa na análise e visualização de informações nutricionais. Nosso objetivo é capacitar usuários com dados detalhados para escolhas alimentares mais saudáveis.
               </p>
               <p className="text-gray-300 mb-4">
                 A plataforma conta com ferramentas como tabelas dinâmicas, gráficos interativos e heatmaps que facilitam a exploração de dados nutricionais. Além disso, integra funcionalidades avançadas de pesquisa e filtros para personalizar a experiência do usuário.
               </p>
               <p className="text-gray-300">
-                Desenvolvido com <span className="font-medium text-red-500">Next.js, TypeScript e Tailwind CSS</span>, o DataNutri prioriza alto desempenho, acessibilidade e design responsivo, garantindo uma navegação intuitiva em qualquer dispositivo.
+                Desenvolvido com <span className="font-medium text-[#4996b5]">Next.js, TypeScript, Tailwind CSS e Python</span>, o DataNutri prioriza alto desempenho, acessibilidade e design responsivo, garantindo uma navegação intuitiva em qualquer dispositivo.
               </p>
             </div>
           </div>

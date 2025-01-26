@@ -12,18 +12,18 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* Links de Navegação */}
-        {/* <ul className="flex space-x-6">
+        <ul className="flex space-x-6">
           <li>
-            <Link href="#projetos" className="hover:text-[var(--highlight-color)] transition-colors duration-200">
-              Projetos
+            <Link href="/chilli" className="hover:text-[var(--highlight-color)] transition-colors duration-200">
+              Chili
             </Link>
           </li>
           <li>
-            <Link href="#contato" className="hover:text-[var(--highlight-color)] transition-colors duration-200">
-              Contato
+            <Link href="/dataNutri" className="hover:text-[var(--highlight-color)] transition-colors duration-200">
+              DataNutri
             </Link>
           </li>
-        </ul> */}
+        </ul>
       </div>
     </nav>
   );

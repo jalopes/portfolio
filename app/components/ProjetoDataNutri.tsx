@@ -98,9 +98,7 @@ const ProjetoDataNutri: React.FC<ProjetoDataNutriProps> = ({
             </p>
             <p className="text-lg md:text-xl text-gray-300 mb-6">
               Desenvolvido com{' '}
-              <span className="font-medium text-green-500">
-                Next.js, TypeScript e Tailwind CSS
-              </span>
+              <span className="font-medium text-[#4996b5]">Next.js, TypeScript, Tailwind CSS e Python</span>
               , o DataNutri prioriza alto desempenho, acessibilidade e design responsivo, garantindo uma navegação intuitiva em qualquer dispositivo.
             </p>
 
