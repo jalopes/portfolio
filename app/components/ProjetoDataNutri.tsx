@@ -60,92 +60,62 @@ const ProjetoDataNutri: React.FC<ProjetoDataNutriProps> = ({
 
   return (
     <section className="bg-gray-600">
-      <div className="container mx-auto p-6 md:p-20 flex flex-col md:flex-row" style={{ minHeight: '1200px' }}>
-        {/* Imagens do Projeto com Contêiner de Perspectiva */}
-        <div
-          className="w-full md:w-2/5 relative aspect-video mt-48"
-          style={{
-            perspective: '1000px', // Define a perspectiva para as transformações 3D
-          }}
-        >
-          {/* Imagem 3 */}
+      <div className="md:container mx-auto p-6 md:p-10">
 
-          {/* Imagem 2 */}
-          <div
-            className="absolute top-4 left-6"
-            style={{
-              transform: getTransformStyle(offsets.image2, transforms.image2, 50),
-              zIndex: 20, // Z-Index médio
-              backfaceVisibility: 'hidden',
-              transformOrigin: 'center center',
-            }}
-          >
-            <Image
-              src="/dataNutri/table.png" // Atualize o caminho da imagem conforme necessário
-              alt="Table DataNutri"
-              layout="responsive"
-              width={16}
-              height={9}
-              className="object-cover shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-gray-800"
-            />
-          </div>
+        <h1 className="md:pl-20 text-4xl md:text-5xl font-bold text-white mb-6 text-center uppercase tracking-wider">
+          DataNutri
+        </h1>
 
-          {/* Imagem 1 */}
-          <div
-            className="absolute top-0 left-0"
-            style={{
-              transform: getTransformStyle(offsets.image1, transforms.image1, 100),
-              zIndex: 9999, // Z-Index muito alto para garantir que esteja na frente
-              backfaceVisibility: 'hidden',
-              transformOrigin: 'center center',
-            }}
-          >
-            <Image
-              src="/dataNutri/detail.png" // Atualize o caminho da imagem conforme necessário
-              alt="DataNutri Home"
-              layout="responsive"
-              width={16}
-              height={9}
-              className="object-cover shadow-[0_15px_50px_rgba(0,0,0,0.7)] "
-              style={{ maxHeight: '500px', maxWidth: '400px' }}
-            />
-          </div>
-        </div>
+        {/* Container Flex para Imagem e Descrição */}
+        <div className="flex flex-col md:flex-row">
+          {/* Imagem */}
 
-        {/* Spacer para layout - escondido em telas pequenas */}
-        <div className="hidden md:block md:w-1/5"></div>
-
-        {/* Descrição do Projeto */}
-        <div className="w-full md:w-2/5 flex flex-col justify-center mt-8 md:mt-0 md:ml-10">
-          <h1 className="text-4xl font-bold text-white mb-6">DataNutri</h1>
-          <p className="text-lg text-gray-300 mb-4">
-            O <span className="text-green-500 font-semibold">DataNutri</span> é uma plataforma interativa projetada para oferecer uma experiência completa na análise e visualização de informações nutricionais. Nosso objetivo é capacitar usuários com dados detalhados para escolhas alimentares mais saudáveis.
-          </p>
-          <p className="text-lg text-gray-300 mb-4">
-            A plataforma conta com ferramentas como tabelas dinâmicas, gráficos interativos e heatmaps que facilitam a exploração de dados nutricionais. Além disso, integra funcionalidades avançadas de pesquisa e filtros para personalizar a experiência do usuário.
-          </p>
-          <p className="text-lg text-gray-300 mb-6">
-            Desenvolvido com{' '}
-            <span className="font-medium text-green-500">
-              Next.js, TypeScript e Tailwind CSS
-            </span>
-            , o DataNutri prioriza alto desempenho, acessibilidade e design responsivo, garantindo uma navegação intuitiva em qualquer dispositivo.
-          </p>
-
-
-
-          <div className="flex justify-center items-center mx-auto">
-            <Link
-              href="/dataNutri"
-              className="inline-block px-6 py-3 bg-[#4996b5] text-white font-medium text-lg rounded-lg shadow-md hover:bg-[#3884a5] transition-all uppercase tracking-wide mt-8"
+          <div className="md:w-3/5 mx-auto p-6 flex justify-center items-start lg:flex">
+            <div
+              className="relative aspect-video"
+              style={{
+                perspective: '1000px', // Define a perspectiva para as transformações 3D, se necessário
+              }}
             >
-              Ver Mais
-            </Link>
+              <Image
+                src="/dataNutri/cover_nutri.png"
+                alt="Cover Hotel Chilli"
+                layout="responsive"
+                width={16}
+                height={9}
+                className="object-cover"
+              />
+            </div>
           </div>
+          
+          {/* Descrição do Projeto */}
+          <div className="w-full md:w-3/5 flex flex-col justify-center mt-8 md:mt-0 md:ml-10 md:pt-10">
+            <p className="text-lg md:text-xl text-gray-300 mb-4">
+              O <span className="text-[#4996b5] font-semibold">DataNutri</span> é uma plataforma interativa projetada para oferecer uma experiência completa na análise e visualização de informações nutricionais. Nosso objetivo é capacitar usuários com dados detalhados para escolhas alimentares mais saudáveis.
+            </p>
+            <p className="text-lg md:text-xl text-gray-300 mb-4">
+              A plataforma conta com ferramentas como tabelas dinâmicas, gráficos interativos e heatmaps que facilitam a exploração de dados nutricionais. Além disso, integra funcionalidades avançadas de pesquisa e filtros para personalizar a experiência do usuário.
+            </p>
+            <p className="text-lg md:text-xl text-gray-300 mb-6">
+              Desenvolvido com{' '}
+              <span className="font-medium text-green-500">
+                Next.js, TypeScript e Tailwind CSS
+              </span>
+              , o DataNutri prioriza alto desempenho, acessibilidade e design responsivo, garantindo uma navegação intuitiva em qualquer dispositivo.
+            </p>
 
-
+            <div className="flex justify-center items-center mx-auto">
+              <Link
+                href="/dataNutri"
+                className="inline-block px-6 py-3 bg-[#4996b5] text-white font-medium text-lg rounded-lg shadow-md hover:bg-[#3884a5] transition-all uppercase tracking-wide"
+              >
+                Ver Mais
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
+
       <DiagonalDivider invert />
     </section>
   );

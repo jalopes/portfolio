@@ -20,11 +20,14 @@ const DiagonalDivider: React.FC<DiagonalDividerProps> = ({ invert = false, angle
       viewBox={`0 0 ${width} ${height.toFixed(2)}`} // Define a área de visualização do SVG
       preserveAspectRatio="none" // Mantém a proporção ao redimensionar
       className="w-full" // Largura completa do contêiner pai
-      style={{ display: 'block', height: `${height}px` }} // Define a altura com base no cálculo
+      style={{
+        display: 'block',
+        height: `${height}px`,
+        marginBottom: '-1px', // Remove visualmente a linha na borda
+      }}
     >
       {/* Desenha o polígono com cor sólida gray-500 */}
-      {/* <polygon points={points} fill="#6B7280" /> */}
-      <polygon points={points} fill="#1F2937" /> 
+      <polygon points={points} fill="#4B5563" /> {/* gray-500 */}
     </svg>
   );
 };

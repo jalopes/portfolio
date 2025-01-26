@@ -24,56 +24,20 @@ body {
 }
 
 
-.mockup {
-  /* width: 600px;
-  height: 400px; */
-
-
-
-  width: 400px;
-  height: 400px;
-
-
-
-  /* background-image: url('/dataNutri/table.png'); */
-  background-image: url('/chilli/home.png'); 
-  background-size: cover;
-  background-position: center;
-  /* transform: perspective(800px) rotateX(25deg) rotateY(-35deg) translateY(-20px); */
-  transform: perspective(800px) rotateX(25deg) rotateY(0deg) rotateZ(-30deg) translateY(-20px);
-  /* transform: perspective(800px) rotateX(25deg) rotateY(-35deg) translateY(-20px); */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
 }
 
-.mockup:hover {
-  /* transform: perspective(800px) rotateX(-25deg) rotateY(0deg) translateY(20deg) scale(1.05); */
-  transform: perspective(800px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0) scale(1);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #fff; /* Cor da barra de rolagem alterada para dark-text-color */
+  border-radius: 10px;
 }
 
-
-
-
-
-
-.mockup2 {
-  width: 400px;
-  height: 400px;
-
-
-
-  background-image: url('/dataNutri/table.png');
-  background-size: cover;
-  background-position: center;
-  transform: perspective(800px) rotateX(25deg) rotateY(0deg) rotateZ(-30deg) translateY(-20px);
-  /* transform: perspective(800px) rotateX(25deg) rotateY(-35deg) translateY(-20px); */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover-color); /* Cor da barra ao passar o mouse */
 }
 
-.mockup2:hover {
-  /* transform: perspective(800px) rotateX(-25deg) rotateY(0deg) translateY(20deg) scale(1.05); */
-  transform: perspective(800px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0) scale(1);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color); /* Cor do fundo da barra */
 }
+

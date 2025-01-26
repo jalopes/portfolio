@@ -6,18 +6,13 @@ const Navbar: React.FC = () => {
   return (
     <nav className="bg-black text-white uppercase tracking-wider font-bold">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo ou Título */}
+
         <Link href="/" className="text-2xl font-bold text-white">
           Meu Portfólio
         </Link>
 
         {/* Links de Navegação */}
-        <ul className="flex space-x-6">
-          <li>
-            <Link href="#sobre" className="hover:text-[var(--highlight-color)] transition-colors duration-200">
-              Sobre
-            </Link>
-          </li>
+        {/* <ul className="flex space-x-6">
           <li>
             <Link href="#projetos" className="hover:text-[var(--highlight-color)] transition-colors duration-200">
               Projetos
@@ -28,7 +23,7 @@ const Navbar: React.FC = () => {
               Contato
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </nav>
   );

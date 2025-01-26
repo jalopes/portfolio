@@ -34,10 +34,6 @@ const ProjetoChilli: React.FC<ProjetoChilliProps> = ({
     image3: { x: -400, y: 100 },
   },
   transforms = {
-    // image1: { rotateX: 0, rotateY: 0, rotateZ: 0 },
-    // image2: { rotateX: 40, rotateY: 0, rotateZ: 0 },
-    // image3: { rotateX: 40, rotateY: 0, rotateZ: 0 },
-
     image1: { rotateX: 0, rotateY: 0, rotateZ: 0 },
     image2: { rotateX: 0, rotateY: 0, rotateZ: 0 },
     image3: { rotateX: 0, rotateY: 0, rotateZ: 0 },
@@ -63,137 +59,60 @@ const ProjetoChilli: React.FC<ProjetoChilliProps> = ({
 
   return (
     <section className="bg-gray-800">
-      <div className="container mx-auto p-6 md:p-20 flex flex-col md:flex-row" style={{ minHeight: '1200px' }}>
+      <div className="md:container mx-auto p-6 md:p-10">
 
+        <h1 className="md:pl-20 text-4xl md:text-5xl font-bold text-white mb-6 text-center uppercase tracking-wider">
+          Hotel Chilli
+        </h1>
 
-
-        {/*         
-        <div
-          className="w-full md:w-2/5 relative aspect-video mt-48"
-          style={{
-            perspective: '1000px', // Define a perspectiva para as transformações 3D
-          }}
-        >
-          <div
-            className="absolute top-8 left-12"
-            style={{
-              transform: getTransformStyle(offsets.image3, transforms.image3, 0),
-              zIndex: 10, // Z-Index baixo
-              backfaceVisibility: 'hidden', // Oculta a face traseira
-              transformOrigin: 'center center', // Define o ponto de origem da transformação
-            }}
-          >
-            <Image
-              src="/chilli/admin.jpg"
-              alt="Admin Hotel Chilli"
-              layout="responsive"
-              width={16}
-              height={9}
-              className="object-cover shadow-[0_10px_30px_rgba(0,0,0,0.5)] border-gray-800"
-            />
-          </div>
-
-
-          <div
-            className="absolute top-4 left-6"
-            style={{
-              transform: getTransformStyle(offsets.image2, transforms.image2, 50),
-              zIndex: 0, // Z-Index médio
-              backfaceVisibility: 'hidden',
-              transformOrigin: 'center center',
-            }}
-          >
-            <Image
-              src="/chilli/reservas.png"
-              alt="Reservas Hotel Chilli"
-              layout="responsive"
-              width={16}
-              height={9}
-              className="object-cover shadow-[0_10px_30px_rgba(0,0,0,0.5)] border-gray-800"
-            />
-          </div>
-
-
-          <div
-            className="absolute top-0 left-0"
-            style={{
-              transform: getTransformStyle(offsets.image1, transforms.image1, 100),
-              zIndex: 9999, // Z-Index muito alto para garantir que esteja na frente
-              backfaceVisibility: 'hidden',
-              transformOrigin: 'center center',
-            }}
-          >
-            <Image
-              src="/chilli/home.png"
-              alt="Hotel Chilli"
-              layout="responsive"
-              width={16}
-              height={9}
-              className="object-cover shadow-[0_15px_50px_rgba(0,0,0,0.7)] border border-gray-800"
-            />
-          </div>
-        </div>
- */}
-
-
-
-
-        <div
-          className="container mx-auto p-6 md:p-20 flex justify-center items-center"
-          style={{ minHeight: '1200px' }}
-        >
-          {/* Imagem única */}
-          <div
-            className="relative aspect-video"
-            style={{
-              perspective: '1000px', // Define a perspectiva para as transformações 3D, se necessário
-            }}
-          >
-            <Image
-              src="/chilli/cover.png"
-              alt="Cover Hotel Chilli"
-              layout="responsive"
-              width={16}
-              height={9}
-              className="object-cover"
-            />
-          </div>
-        </div>
-
-
-
-        {/* Spacer para layout - escondido em telas pequenas */}
-        {/* <div className="hidden md:block md:w-1/5"></div> */}
-
-        {/* Descrição do Projeto */}
-        <div className="w-full md:w-3/5 flex flex-col justify-center mt-8 md:mt-0 md:ml-10">
-          <h1 className="text-4xl font-bold text-white mb-6">Hotel Chilli</h1>
-          <p className="text-lg text-gray-300 mb-4">
-            O <span className="text-red-500 font-semibold">Hotel Chilli</span> é um projeto temático desenvolvido para oferecer uma experiência completa de hospedagem online. O site inclui uma área dedicada para reservas, com integração direta a plataformas de pagamento seguras e um sistema de gerenciamento eficiente.
-          </p>
-          <p className="text-lg text-gray-300 mb-4">
-            O projeto também conta com uma página exclusiva para administradores, onde é possível gerenciar reservas, verificar disponibilidade e acessar relatórios detalhados.
-          </p>
-          <p className="text-lg text-gray-300 mb-6">
-            O site foi desenvolvido utilizando tecnologias modernas como{' '}
-            <span className="font-medium text-red-500">
-              Next.js, TypeScript e Tailwind CSS
-            </span>
-            , priorizando segurança, desempenho e usabilidade. O layout responsivo garante uma navegação eficiente em diversos dispositivos.
-          </p>
-
-
-          <div className="flex justify-center items-center mx-auto">
-            <Link
-              href="/chilli"
-              className="inline-block px-6 py-3 bg-red-500 text-white font-medium text-lg rounded-lg shadow-md hover:bg-red-600 transition-all uppercase tracking-wide"
+        {/* Container Flex para Imagem e Descrição */}
+        <div className="flex flex-col md:flex-row">
+          {/* Imagem */}
+          <div className="md:w-3/5 mx-auto p-6 flex justify-center items-start lg:flex">
+            <div
+              className="relative aspect-video"
+              style={{
+                perspective: '1000px', // Define a perspectiva para as transformações 3D, se necessário
+              }}
             >
-              Ver Mais
-            </Link>
+              <Image
+                src="/chilli/cover.png"
+                alt="Cover Hotel Chilli"
+                layout="responsive"
+                width={16}
+                height={9}
+                className="object-cover"
+              />
+            </div>
           </div>
 
+          <div className="w-full md:w-3/5 flex flex-col justify-center mt-8 md:mt-0 md:ml-10 md:pt-10">
+            <p className="text-lg md:text-xl text-gray-300 mb-4">
+              O <span className="text-red-500 font-semibold">Hotel Chilli</span> é um projeto temático desenvolvido para oferecer uma experiência completa de hospedagem online. O site inclui uma área dedicada para reservas, com integração direta a plataformas de pagamento seguras e um sistema de gerenciamento eficiente.
+            </p>
+            <p className="text-lg md:text-xl text-gray-300 mb-4">
+              O projeto também conta com uma página exclusiva para administradores, onde é possível gerenciar reservas, verificar disponibilidade e acessar relatórios detalhados.
+            </p>
+            <p className="text-lg md:text-xl text-gray-300 mb-6">
+              O site foi desenvolvido utilizando tecnologias modernas como{' '}
+              <span className="font-medium text-red-500">
+                Next.js, TypeScript e Tailwind CSS
+              </span>
+              , priorizando segurança, desempenho e usabilidade. O layout responsivo garante uma navegação eficiente em diversos dispositivos.
+            </p>
+
+            <div className="flex justify-center items-center mx-auto">
+              <Link
+                href="/chilli"
+                className="inline-block px-6 py-3 bg-red-500 text-white font-medium text-lg rounded-lg shadow-md hover:bg-red-600 transition-all uppercase tracking-wide"
+              >
+                Ver Mais
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
+
       <DiagonalDivider invert />
     </section>
   );
